@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <style>
     .list-header {
-        text-align: center;
+        text-align: right;
         font-style: bold;
     }
     a:hover {
@@ -13,6 +13,9 @@
     a:click {
         color:pink;
     }
+    .button {
+        text-align: left;
+    }
 </style>
 <html lang = 'en'>
 <head>
@@ -20,14 +23,23 @@
 <h1 style = 'text-align: center; font-size: 80px; font-style: bold;'>Reed Stewart</h1>
 </head>
 <body>
-<h2 class = 'list-header'>My Certifications</h2>
-<ul style = 'text-align: center; list-style-position: inside; margin-right: 55px; margin-top: 10px;'>
-    <li><a target = '_blank' href = 'https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&format=pdf&id=471'>Python</a></li>
-    <li><a target = '_blank' href = 'https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&format=pdf&id=468'>HTML-CSS</a></li>
-</ul>
+    <script>
+        let CurrentGoal = 'JavaScript'
+        function MyNextCertification() {
+        document.getElementById('Workingto').innerHTML = CurrentGoal
+        }
+    </script>
+    <div class="Certifications">
+        <h2 class = 'list-header'>My Certifications</h2>
+        <ul style = 'text-align: right; list-style-position: inside; margin-right: 55px; margin-top: 10px;'>
+            <li><a target = '_blank' href = 'https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&format=pdf&id=471'>Python</a></li>
+            <li><a target = '_blank' href = 'https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&format=pdf&id=468'>HTML-CSS</a></li>
+        </ul>
+    </div>
+    <div class="Nextup">
+        <h3 class = 'button'>What certification am i working towards right now?</h3>
+        <button class = 'button' onclick = 'MyNextCertification()' style = 'margin-left: 140px;'>Click me to see!</button>
+        <h1 id = 'Workingto' class = 'button' style = 'margin-left: 125px;'></h1>
+    </div>
 </body>
-
-
-
-
 </html>
