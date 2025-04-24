@@ -1080,27 +1080,27 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+        <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-form">
-            <form action="https://formspree.io/f/xovdqjyr" method="POST">
-                <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="subject" class="form-control" placeholder="Subject">
-                </div>
-                <div class="form-group">
-                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
+                <form action="https://formspree.io/f/xovdqjyr" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
             <div class="contact-info">
                 <div class="contact-method">
                     <i class="fas fa-envelope"></i>
@@ -1109,11 +1109,12 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Reed Stewart. All Rights Reserved.</p>
     </footer>
+
 
     <!-- JavaScript -->
     <script>
@@ -1181,19 +1182,12 @@
         });
 
         // Form submission (for demonstration - would need backend processing)
-        const form = document.querySelector('form');
-        if (form) {
+    // Form submission handler for Formspree
+            const form = document.querySelector('#contact form');
             form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formData = new FormData(this);
-                
-                // Alert for demonstration purposes
-                alert('Thank you for your message! This is a frontend demo only, so the message was not actually sent.');
-                
-                // Reset form
-                this.reset();
+                // The form will be handled by Formspree - no need to prevent default
+                // The page will navigate to a Formspree thank you page after submission
             });
-        }
     </script>
 </body>
 </html>
